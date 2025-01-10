@@ -430,7 +430,7 @@ if not creds or not creds.valid:
         creds.refresh(Request())
     else:
         flow = InstalledAppFlow.from_client_secrets_file(
-            r"C:\Users\mabne\Downloads\credentials.json", SCOPES)
+            r"C:\path\to\credetial\.json\file", SCOPES) #path to credential .json file
         creds = flow.run_local_server(port=0)
     # Save the credentials for the next run
     with open('token.pickle', 'wb') as token:
